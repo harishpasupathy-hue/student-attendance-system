@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Students</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<nav>
+    <h2>Attendance Management System</h2>
+
+    <a href="/dashboard">Dashboard</a>
+    <a href="/students">Students</a>
+    <a href="/attendance">Attendance</a>
+    <a href="/report">Report</a>
+    <a href="/logout">Logout</a>
+</nav>
+
+<div class="container">
+
+    <h1>Student Management</h1>
+
+    <form method="POST" class="student-form">
+
+        <input type="text"
+               name="roll_no"
+               placeholder="Roll Number"
+               required>
+
+        <input type="text"
+               name="name"
+               placeholder="Student Name"
+               required>
+
+        <input type="text"
+               name="department"
+               placeholder="Department"
+               required>
+
+        <button type="submit">Add Student</button>
+
+    </form>
+
+    <h2>Student List</h2>
+
+    <table>
+
+        <tr>
+            <th>Roll No</th>
+            <th>Name</th>
+            <th>Department</th>
+            <th>Action</th>
+        </tr>
+
+        {% for student in students %}
+
+        <tr>
+
+            <td>{{ student["roll_no"] }}</td>
+
+            <td>{{ student["name"] }}</td>
+
+            <td>{{ student["department"] }}</td>
+
+            <td>
+                <a class="delete"
+                   href="/delete/{{ student['id'] }}">
+                   Delete
+                </a>
+            </td>
+
+        </tr>
+
+        {% endfor %}
+
+    </table>
+
+</div>
+
+</body>
+</html>

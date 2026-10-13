@@ -1,0 +1,105 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f2f4f7;
+}
+
+nav {
+    background: #222;
+    padding: 15px;
+    color: white;
+}
+
+nav h2 {
+    display: inline;
+    margin-right: 30px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 10px;
+}
+
+.container {
+    width: 90%;
+    margin: 30px auto;
+}
+
+.login-box {
+    width: 400px;
+    margin: 100px auto;
+    padding: 30px;
+    background: white;
+    text-align: center;
+    box-shadow: 0 0 10px #aaa;
+}
+
+input {
+    padding: 10px;
+    margin: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    background: #222;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #444;
+}
+
+.cards {
+    display: flex;
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0 0 8px #ccc;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+}
+
+th, td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+th {
+    background: #222;
+    color: white;
+}
+
+.student-form {
+    background: white;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.delete {
+    color: red;
+    text-decoration: none;
+}
+
+.error {
+    color: red;
+}
